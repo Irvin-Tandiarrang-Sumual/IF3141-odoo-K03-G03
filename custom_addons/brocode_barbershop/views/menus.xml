@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_brocode_root" name="Brocode Barbershop" sequence="10"/>
+    
+    <!-- Sub Menus -->
+    <menuitem id="menu_brocode_reservation" name="Reservasi Layanan" parent="menu_brocode_root" sequence="10" action="action_brocode_reservation"/>
+    <menuitem id="menu_brocode_readiness" name="Kesiapan Toko" parent="menu_brocode_root" sequence="20" action="action_brocode_readiness"/>
+    <menuitem id="menu_brocode_procurement" name="Pengadaan PO" parent="menu_brocode_root" sequence="30" action="action_brocode_procurement"/>
+    <menuitem id="menu_brocode_expense" name="Klaim Biaya" parent="menu_brocode_root" sequence="40" action="action_brocode_expense"/>
+</odoo>

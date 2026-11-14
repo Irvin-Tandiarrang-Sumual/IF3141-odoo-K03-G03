@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View Form Kesiapan Toko -->
+    <record id="view_brocode_readiness_form" model="ir.ui.view">
+        <field name="name">brocode.store_readiness.form</field>
+        <field name="model">brocode.store_readiness</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="opening_status" widget="statusbar" statusbar_visible="PreOpening,StoreOpen,Operational"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Informasi Toko">
+                            <field name="branch_id"/>
+                            <field name="record_date"/>
+                            <field name="staff_user_id"/>
+                        </group>
+                        <group string="Waktu">
+                            <field name="opening_time" widget="float_time"/>
+                            <field name="closing_time" widget="float_time"/>
+                            <field name="closing_status" widget="badge"/>
+                        </group>
+                    </group>
+                    <group string="Checklist Pagi">
+                        <field name="checklist_cleanliness"/>
+                        <field name="checklist_sterilization"/>
+                        <field name="checklist_cash_register"/>
+                    </group>
+                    <group string="Catatan Penutupan">
+                        <field name="overtime_notes"/>
+                    </group>
+                </sheet>
+                <!-- Area Audit Trail / Chatter -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View Tree Kesiapan Toko -->
+    <record id="view_brocode_readiness_tree" model="ir.ui.view">
+        <field name="name">brocode.store_readiness.tree</field>
+        <field name="model">brocode.store_readiness</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="branch_id"/>
+                <field name="record_date"/>
+                <field name="opening_status" widget="badge"/>
+                <field name="closing_status" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_brocode_readiness" model="ir.actions.act_window">
+        <field name="name">Kesiapan Toko</field>
+        <field name="res_model">brocode.store_readiness</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

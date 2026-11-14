@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_brocode_reservation,brocode.reservation,model_brocode_reservation,,1,1,1,1
+access_brocode_procurement,brocode.procurement,model_brocode_procurement,,1,1,1,1
+access_brocode_expense,brocode.expense,model_brocode_expense,,1,1,1,1
+access_brocode_store_readiness,brocode.store_readiness,model_brocode_store_readiness,,1,1,1,1
