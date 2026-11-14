@@ -9,8 +9,8 @@
     "installable": True,
     "data": [
         "security/ir.model.access.csv",
-        "views/reservation_views.xml",       # <--- Pindahkan view ke atas
-        "views/store_readiness_views.xml",   # <--- Pindahkan view ke atas
-        "views/menus.xml",                   # <--- Pindahkan menu ke bawah
+        "views/reservation_views.xml",       
+        "views/store_readiness_views.xml",   
+        "views/menus.xml",                   
     ],
 }
